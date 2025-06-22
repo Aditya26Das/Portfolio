@@ -1,4 +1,206 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
+// import { Button } from "../../components/ui/button";
+// import { Input } from "../../components/ui/input";
+// import { Textarea } from "../../components/ui/textarea";
+// import { AboutMeSection } from "./sections/AboutMeSection";
+// import { AchievementsSection } from "./sections/AchievementsSection";
+// import { ExperienceSection } from "./sections/ExperienceSection";
+// import { ProjectsSection } from "./sections/ProjectsSection";
+// import { SkillsSection } from "./sections/SkillsSection";
+// import { ProfileLinksSection } from "./sections/ProfileLinksSection";
+
+// export const StitchDesign = (): JSX.Element => {
+//   // Achievement data for mapping
+//   const achievements = [
+//     "Secured a rank of 724 (top 3%) out of 23,596 participants in the Biweekly Contest 145 on LeetCode.",
+//     "Achieved a rank of 2,297 (top 9%) out of 25,692 participants in the Biweekly Contest 146 on LeetCode.",
+//     "Ranked 373 (top 13%) out of 2,834 participants in the CodeChef Starters 176 weekly contest.",
+//     "Attained a consistent ranking among the top 6 students in the branch, placing within the top 10% overall.",
+//     "Solved more than 350+ problems on LeetCode, showcasing a strong understanding of Data Structures and Algorithms."
+//   ];
+
+//   // Add smooth scrolling behavior on component mount
+//   useEffect(() => {
+//     // Enable smooth scrolling for the entire document
+//     document.documentElement.style.scrollBehavior = 'smooth';
+    
+//     // Cleanup function to reset scroll behavior
+//     return () => {
+//       document.documentElement.style.scrollBehavior = 'auto';
+//     };
+//   }, []);
+
+//   return (
+//     <div className="flex flex-col items-start w-full bg-white">
+//       <div className="flex flex-col w-full bg-[#111421]">
+//         <div className="flex flex-col w-full">
+//           <AboutMeSection />
+
+//           <div className="flex justify-center px-4 sm:px-8 md:px-16 lg:px-40 py-5 w-full">
+//             <div className="flex flex-col max-w-[960px] w-full">
+//               {/* Hero Projects Section */}
+//               <section id="projects-hero" className="scroll-mt-20">
+//                 <ProjectsSection />
+//               </section>
+
+//               {/* About Section */}
+//               <section id="about" className="scroll-mt-20">
+//                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+//                   <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
+//                     About Me
+//                   </h2>
+//                 </div>
+
+//                 <div className="flex flex-col pt-1 pb-3 px-2 sm:px-4 w-full">
+//                   <p className="font-normal text-white text-sm sm:text-base leading-5 sm:leading-6 [font-family:'Inter',Helvetica]">
+//                     👋 Hi, I'm Aditya Das, a tech enthusiast passionate about building intelligent systems. I specialize in AI/ML, full-stack app development with FastAPI and Streamlit, and have hands-on experience with Langchain, LLMs, and NLP. I'm also deeply invested in Data Structures & Algorithms, having solved 350+ problems on LeetCode.
+//                   </p>
+//                 </div>
+//               </section>
+
+//               {/* Projects Content Section */}
+//               <section id="projects" className="scroll-mt-20">
+//                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+//                   <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
+//                     Projects
+//                   </h2>
+//                 </div>
+
+//                 <ExperienceSection />
+//               </section>
+
+//               {/* Skills Section */}
+//               <section id="skills" className="scroll-mt-20">
+//                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+//                   <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
+//                     Skills
+//                   </h2>
+//                 </div>
+
+//                 <SkillsSection />
+//               </section>
+
+//               {/* Experience Section */}
+//               <section id="experience" className="scroll-mt-20">
+//                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+//                   <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
+//                     Experience
+//                   </h2>
+//                 </div>
+
+//                 <AchievementsSection />
+//               </section>
+
+//               {/* Achievements Section */}
+//               <section id="achievements" className="scroll-mt-20">
+//                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+//                   <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
+//                     Achievements
+//                   </h2>
+//                 </div>
+
+//                 <div className="grid grid-cols-1 gap-3 sm:gap-4 px-2 sm:px-4 w-full">
+//                   {achievements.map((achievement, index) => (
+//                     <div
+//                       key={`achievement-${index}`}
+//                       className="w-full bg-[#1c1e30] border border-[#383d60] rounded-xl px-3 sm:px-4 py-3 transition-all hover:shadow-md"
+//                     >
+//                       <p className="text-white text-xs sm:text-sm leading-5 sm:leading-6 [font-family:'Inter',Helvetica]">
+//                         {achievement}
+//                       </p>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </section>
+
+//               {/* Profile Links Section */}
+//               <section id="profiles" className="scroll-mt-20">
+//                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+//                   <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
+//                     Connect With Me
+//                   </h2>
+//                 </div>
+
+//                 <ProfileLinksSection />
+//               </section>
+
+//               {/* Contact Section */}
+//               <section id="contact" className="scroll-mt-20">
+//                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+//                   <h2 className="text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 font-bold text-white [font-family:'Inter',Helvetica]">
+//                     Contact
+//                   </h2>
+//                 </div>
+
+//                 <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+//                   <div className="flex flex-col w-full min-w-0 flex-1">
+//                     <Input
+//                       className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
+//                       placeholder="Your Name"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+//                   <div className="flex flex-col w-full min-w-0 flex-1">
+//                     <Input
+//                       className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
+//                       placeholder="Your Email"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+//                   <div className="flex flex-col w-full min-w-0 flex-1">
+//                     <Textarea 
+//                       className="min-h-32 sm:min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4] text-sm sm:text-base p-3 sm:p-4" 
+//                       placeholder="Your Message"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="flex px-2 sm:px-4 py-3 w-full">
+//                   <Button className="w-20 sm:w-[84px] h-10 bg-[#0c164c] rounded-[20px] text-sm font-bold text-white [font-family:'Inter',Helvetica] hover:bg-[#0a1440]">
+//                     Send
+//                   </Button>
+//                 </div>
+//               </section>
+//             </div>
+//           </div>
+
+//           {/* Footer */}
+//           <div className="flex justify-center w-full">
+//             <div className="flex flex-col max-w-[960px] flex-1">
+//               <div className="flex flex-col gap-4 sm:gap-6 px-4 sm:px-5 py-8 sm:py-10 w-full">
+//                 <div className="flex flex-wrap justify-center gap-3 sm:gap-4 w-full">
+//                   <div className="inline-flex items-center flex-col">
+//                     <div className="inline-flex items-center flex-col">
+//                       <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-600 rounded" />
+//                     </div>
+//                   </div>
+
+//                   <div className="inline-flex items-center flex-col">
+//                     <div className="inline-flex items-center flex-col">
+//                       <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-600 rounded" />
+//                     </div>
+//                   </div>
+//                 </div>
+
+//                 <div className="flex flex-col items-center w-full">
+//                   <p className="font-normal text-[#969ec4] text-sm sm:text-base text-center leading-5 sm:leading-6 [font-family:'Inter',Helvetica]">
+//                     ©2025 Aditya Das. All rights reserved.
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+import React, { useEffect, useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
@@ -8,6 +210,28 @@ import { ExperienceSection } from "./sections/ExperienceSection";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { SkillsSection } from "./sections/SkillsSection";
 import { ProfileLinksSection } from "./sections/ProfileLinksSection";
+import { CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import emailjs from '@emailjs/browser';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+const serviceId = process.env.SERVICE_ID
+const templateId = process.env.TEMPLATE_ID;
+const publicKey = process.env.PUBLIC_KEY;
+
+if (!serviceId || !templateId || !publicKey) {
+  throw new Error("EmailJS environment variables are not set. Please check your .env file.");
+}
+
+// Contact form interface
+interface ContactForm {
+  name: string;
+  email: string;
+  message: string;
+}
+
+// Email status type
+type EmailStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export const StitchDesign = (): JSX.Element => {
   // Achievement data for mapping
@@ -19,6 +243,17 @@ export const StitchDesign = (): JSX.Element => {
     "Solved more than 350+ problems on LeetCode, showcasing a strong understanding of Data Structures and Algorithms."
   ];
 
+  // Contact form state
+  const [contactForm, setContactForm] = useState<ContactForm>({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  // Email sending status
+  const [emailStatus, setEmailStatus] = useState<EmailStatus>('idle');
+  const [statusMessage, setStatusMessage] = useState<string>('');
+
   // Add smooth scrolling behavior on component mount
   useEffect(() => {
     // Enable smooth scrolling for the entire document
@@ -29,6 +264,124 @@ export const StitchDesign = (): JSX.Element => {
       document.documentElement.style.scrollBehavior = 'auto';
     };
   }, []);
+
+  // Handle form input changes
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setContactForm(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  // Validate email format
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form
+    if (!contactForm.name.trim()) {
+      setEmailStatus('error');
+      setStatusMessage('Please enter your name.');
+      return;
+    }
+    
+    if (!contactForm.email.trim()) {
+      setEmailStatus('error');
+      setStatusMessage('Please enter your email.');
+      return;
+    }
+    
+    if (!isValidEmail(contactForm.email)) {
+      setEmailStatus('error');
+      setStatusMessage('Please enter a valid email address.');
+      return;
+    }
+    
+    if (!contactForm.message.trim()) {
+      setEmailStatus('error');
+      setStatusMessage('Please enter a message.');
+      return;
+    }
+
+    setEmailStatus('sending');
+    setStatusMessage('Sending your message...');
+
+    try {
+      // Replace the setTimeout simulation with:
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: contactForm.name,
+          from_email: contactForm.email,
+          message: contactForm.message,
+          to_email: 'adityadas26112003@gmail.com'
+        },
+        publicKey
+      );
+
+      // Success state
+      setEmailStatus('success');
+      setStatusMessage('Message sent successfully! I\'ll get back to you soon.');
+      
+      // Clear form
+      setContactForm({
+        name: '',
+        email: '',
+        message: ''
+      });
+
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setEmailStatus('idle');
+        setStatusMessage('');
+      }, 5000);
+
+    } catch (error) {
+      setEmailStatus('error');
+      setStatusMessage('Failed to send message. Please try again or contact me directly.');
+      
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setEmailStatus('idle');
+        setStatusMessage('');
+      }, 5000);
+    }
+  };
+
+  // Get status icon based on email status
+  const getStatusIcon = () => {
+    switch (emailStatus) {
+      case 'sending':
+        return <Loader2 className="w-4 h-4 animate-spin" />;
+      case 'success':
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
+      case 'error':
+        return <AlertCircle className="w-4 h-4 text-red-500" />;
+      default:
+        return null;
+    }
+  };
+
+  // Get status message color
+  const getStatusColor = () => {
+    switch (emailStatus) {
+      case 'success':
+        return 'text-green-500';
+      case 'error':
+        return 'text-red-500';
+      case 'sending':
+        return 'text-blue-500';
+      default:
+        return 'text-[#969ec4]';
+    }
+  };
 
   return (
     <div className="flex flex-col items-start w-full bg-white">
@@ -132,38 +485,78 @@ export const StitchDesign = (): JSX.Element => {
                   </h2>
                 </div>
 
-                <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
-                  <div className="flex flex-col w-full min-w-0 flex-1">
-                    <Input
-                      className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
-                      placeholder="Your Name"
-                    />
+                <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">
+                  {/* Name Input */}
+                  <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                    <div className="flex flex-col w-full min-w-0 flex-1">
+                      <Input
+                        name="name"
+                        value={contactForm.name}
+                        onChange={handleInputChange}
+                        className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
-                  <div className="flex flex-col w-full min-w-0 flex-1">
-                    <Input
-                      className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
-                      placeholder="Your Email"
-                    />
+                  {/* Email Input */}
+                  <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                    <div className="flex flex-col w-full min-w-0 flex-1">
+                      <Input
+                        name="email"
+                        type="email"
+                        value={contactForm.email}
+                        onChange={handleInputChange}
+                        className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
-                  <div className="flex flex-col w-full min-w-0 flex-1">
-                    <Textarea 
-                      className="min-h-32 sm:min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4] text-sm sm:text-base p-3 sm:p-4" 
-                      placeholder="Your Message"
-                    />
+                  {/* Message Textarea */}
+                  <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                    <div className="flex flex-col w-full min-w-0 flex-1">
+                      <Textarea 
+                        name="message"
+                        value={contactForm.message}
+                        onChange={handleInputChange}
+                        className="min-h-32 sm:min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4] text-sm sm:text-base p-3 sm:p-4 focus:border-blue-500 focus:ring-1 focus:ring-blue-500" 
+                        placeholder="Your Message"
+                        required
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex px-2 sm:px-4 py-3 w-full">
-                  <Button className="w-20 sm:w-[84px] h-10 bg-[#0c164c] rounded-[20px] text-sm font-bold text-white [font-family:'Inter',Helvetica] hover:bg-[#0a1440]">
-                    Send
-                  </Button>
-                </div>
+                  {/* Status Message */}
+                  {statusMessage && (
+                    <div className="flex items-center gap-2 px-2 sm:px-4 py-2">
+                      {getStatusIcon()}
+                      <p className={`text-sm ${getStatusColor()} [font-family:'Inter',Helvetica]`}>
+                        {statusMessage}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Submit Button */}
+                  <div className="flex px-2 sm:px-4 py-3 w-full">
+                    <Button 
+                      type="submit"
+                      disabled={emailStatus === 'sending'}
+                      className="w-20 sm:w-[84px] h-10 bg-[#0c164c] rounded-[20px] text-sm font-bold text-white [font-family:'Inter',Helvetica] hover:bg-[#0a1440] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    >
+                      {emailStatus === 'sending' ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span className="sr-only">Sending</span>
+                        </>
+                      ) : (
+                        'Send'
+                      )}
+                    </Button>
+                  </div>
+                </form>
               </section>
             </div>
           </div>
