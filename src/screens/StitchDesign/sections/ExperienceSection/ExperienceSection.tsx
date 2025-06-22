@@ -70,14 +70,14 @@ export const ExperienceSection = (): JSX.Element => {
                   <div className="flex gap-2 mt-2">
                     <Button
                       variant="outline"
-                      className="text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440]"
+                      className="text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440] hover:text-white"
                       onClick={() => window.open(project.appLink, "_blank")}
                     >
                       View Live
                     </Button>
                     <Button
                       variant="outline"
-                      className="text-sm border-[#383d60] text-white hover:bg-[#1c1e30]"
+                      className="text-sm border-[#383d60] text-black hover:bg-[#1c1e30] hover:text-white"
                       onClick={() => window.open(project.githubLink, "_blank")}
                     >
                       GitHub
