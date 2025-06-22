@@ -3,6 +3,30 @@ import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const ProjectsSection = (): JSX.Element => {
+  // Smooth scroll to projects content section
+  const handleViewProjects = () => {
+    // Look for the next projects heading after this hero section
+    const projectsHeading = document.querySelector('h2:has-text("Projects")') || 
+                           Array.from(document.querySelectorAll('h2')).find(h => h.textContent?.includes('Projects'));
+    
+    if (projectsHeading) {
+      const headerHeight = 80; // Account for fixed header height
+      const elementPosition = projectsHeading.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback: scroll down by viewport height
+      window.scrollTo({
+        top: window.pageYOffset + window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="w-full">
       <div className="p-2 sm:p-4">
@@ -33,9 +57,10 @@ export const ProjectsSection = (): JSX.Element => {
               </div>
             </div>
             
-            {/* Button - Responsive positioning and sizing */}
+            {/* Button - Responsive positioning and sizing with smooth scroll */}
             <Button
-              className="absolute bottom-2 left-4 sm:bottom-4 sm:left-6 md:bottom-4 md:left-[216px] h-8 sm:h-10 md:h-12 px-3 sm:px-4 md:px-5 py-0 bg-[#0c164c] rounded-2xl sm:rounded-3xl font-bold text-xs sm:text-sm md:text-base hover:bg-[#0a1440] transition-colors"
+              onClick={handleViewProjects}
+              className="absolute bottom-2 left-4 sm:bottom-4 sm:left-6 md:bottom-4 md:left-[216px] h-8 sm:h-10 md:h-12 px-3 sm:px-4 md:px-5 py-0 bg-[#0c164c] rounded-2xl sm:rounded-3xl font-bold text-xs sm:text-sm md:text-base hover:bg-[#0a1440] transition-colors cursor-pointer"
               variant="default"
             >
               View Projects

@@ -25,8 +25,30 @@ export const AboutMeSection = (): JSX.Element => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Smooth scroll function
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const headerHeight = 80; // Account for fixed header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Close mobile menu after clicking
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-[#383d60] w-full relative">
+    <header className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-[#383d60] w-full relative sticky top-0 bg-[#111421] z-50">
       {/* Logo and Title */}
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="flex items-start">
@@ -45,7 +67,8 @@ export const AboutMeSection = (): JSX.Element => {
               <NavigationMenuItem key={index}>
                 <NavigationMenuLink
                   href={item.href}
-                  className="font-medium text-white text-sm leading-[21px] font-['Inter',Helvetica] hover:text-gray-200 transition-colors"
+                  className="font-medium text-white text-sm leading-[21px] font-['Inter',Helvetica] hover:text-blue-400 transition-colors cursor-pointer"
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                 >
                   {item.label}
                 </NavigationMenuLink>
@@ -92,8 +115,8 @@ export const AboutMeSection = (): JSX.Element => {
               <a
                 key={index}
                 href={item.href}
-                className="px-4 sm:px-6 py-3 text-white text-sm font-medium hover:bg-[#1c1e30] transition-colors font-['Inter',Helvetica]"
-                onClick={() => setIsMenuOpen(false)}
+                className="px-4 sm:px-6 py-3 text-white text-sm font-medium hover:bg-[#1c1e30] hover:text-blue-400 transition-colors font-['Inter',Helvetica]"
+                onClick={(e) => handleSmoothScroll(e, item.href)}
               >
                 {item.label}
               </a>
