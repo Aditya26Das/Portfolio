@@ -8,6 +8,17 @@ export const ProjectsSection = (): JSX.Element => {
       <div className="p-4">
         <Card className="w-full overflow-hidden rounded-xl border-0">
           <CardContent className="p-0 relative h-[480px] bg-gradient-to-r from-[#0c164c] to-[#1a2054] flex items-center">
+            {/* Profile Photo */}
+            <div className="absolute bottom-[80px] right-[40px]">
+              <div className="w-48 h-60 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-white/10">
+                <img
+                  src="src/images/Profile.jpg"
+                  alt="Aditya Das Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
             <div className="absolute bottom-[111px] left-[216px] flex flex-col gap-2">
               <div className="flex flex-col items-start">
                 <h2 className="font-black text-white text-5xl tracking-[-2.00px] leading-[60px] font-['Inter',Helvetica]">
