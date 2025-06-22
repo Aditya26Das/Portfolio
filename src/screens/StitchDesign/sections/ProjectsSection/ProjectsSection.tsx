@@ -20,7 +20,7 @@ export const ProjectsSection = (): JSX.Element => {
             </div>
             
             {/* Text Content - Responsive positioning and sizing */}
-            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-[111px] md:left-[216px] flex flex-col gap-1 sm:gap-2 max-w-[60%] sm:max-w-[50%] md:max-w-none">
+            <div className="absolute bottom-14 left-4 sm:bottom-16 sm:left-6 md:bottom-[111px] md:left-[216px] flex flex-col gap-1 sm:gap-2 max-w-[60%] sm:max-w-[50%] md:max-w-none">
               <div className="flex flex-col items-start">
                 <h2 className="font-black text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2px] leading-tight sm:leading-tight md:leading-[60px] font-['Inter',Helvetica]">
                   Aditya Das
