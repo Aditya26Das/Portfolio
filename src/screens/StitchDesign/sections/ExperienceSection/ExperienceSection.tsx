@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
-import { Button } from "../../../../components/ui/button"; // Make sure you have this button component
+import { Button } from "../../../../components/ui/button";
 
 export const ExperienceSection = (): JSX.Element => {
   const projects = [
@@ -37,43 +37,56 @@ export const ExperienceSection = (): JSX.Element => {
     <section className="flex flex-col items-start gap-3 p-4 w-full">
       <div className="flex flex-wrap gap-4 w-full">
         {projects.map((project) => (
-          <a
+          <div
             key={project.id}
-            href={project.appLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 min-w-[280px] max-w-[350px] no-underline"
+            className="flex-1 min-w-[280px] max-w-[350px]"
           >
             <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-none bg-transparent">
               <CardContent className="flex flex-col items-start gap-3 p-0 pb-3">
                 <div
-                  className="w-full h-[169px] rounded-xl"
-                  style={{
-                    background: `url(${project.imageUrl}) 50% 50% / cover`,
-                  }}
-                />
-                <div className="flex flex-col items-start w-full">
+                  className="w-full h-[169px] rounded-xl bg-[#1c1e30] border border-[#383d60] flex items-center justify-center"
+                >
+                  <img 
+                    src={project.imageUrl} 
+                    alt={project.title}
+                    className="w-full h-full object-cover rounded-xl"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.innerHTML = `<div class="text-white text-sm text-center">${project.title}</div>`;
+                      }
+                    }}
+                  />
+                </div>
+                <div className="flex flex-col items-start w-full gap-2">
                   <h3 className="w-full font-medium text-white text-base leading-6 font-sans">
                     {project.title}
                   </h3>
                   <p className="w-full font-normal text-[#969ec4] text-sm leading-[21px] font-sans">
                     {project.description}
                   </p>
-                  <Button
-                    variant="outline"
-                    className="mt-2 text-sm"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      e.preventDefault();
-                      window.open(project.githubLink, "_blank");
-                    }}
-                  >
-                    View GitHub
-                  </Button>
+                  <div className="flex gap-2 mt-2">
+                    <Button
+                      variant="outline"
+                      className="text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440]"
+                      onClick={() => window.open(project.appLink, "_blank")}
+                    >
+                      View Live
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="text-sm border-[#383d60] text-white hover:bg-[#1c1e30]"
+                      onClick={() => window.open(project.githubLink, "_blank")}
+                    >
+                      GitHub
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
-          </a>
+          </div>
         ))}
       </div>
     </section>

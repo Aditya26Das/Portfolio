@@ -70,18 +70,18 @@ export const StitchDesign = (): JSX.Element => {
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 w-full"></div>
+              <div className="grid grid-cols-1 gap-4 px-4 w-full">
                 {achievements.map((achievement, index) => (
-                    <div
-                      key={`achievement-${index}`}
-                      className="w-full bg-[#1c1e30] border border-[#383d60] rounded-xl px-4 py-3 transition-all hover:shadow-md"
-                    >
-                      <p className="text-white text-sm leading-6 [font-family:'Inter',Helvetica]">
-                        {achievement}
-                      </p>
-                    </div>
+                  <div
+                    key={`achievement-${index}`}
+                    className="w-full bg-[#1c1e30] border border-[#383d60] rounded-xl px-4 py-3 transition-all hover:shadow-md"
+                  >
+                    <p className="text-white text-sm leading-6 [font-family:'Inter',Helvetica]">
+                      {achievement}
+                    </p>
+                  </div>
                 ))}
-              
+              </div>
 
               <div className="flex flex-col pt-5 pb-3 px-4 w-full">
                 <h2 className="text-[22px] leading-7 font-bold text-white [font-family:'Inter',Helvetica]">
@@ -93,7 +93,7 @@ export const StitchDesign = (): JSX.Element => {
                 <div className="flex flex-col min-w-40 flex-1">
                   <Input
                     className="h-14 p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica]"
-                    placeholder="Your  Name"
+                    placeholder="Your Name"
                   />
                 </div>
               </div>
@@ -102,14 +102,17 @@ export const StitchDesign = (): JSX.Element => {
                 <div className="flex flex-col min-w-40 flex-1">
                   <Input
                     className="h-14 p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica]"
-                    placeholder="Your  Email"
+                    placeholder="Your Email"
                   />
                 </div>
               </div>
 
               <div className="flex flex-wrap max-w-[480px] gap-[16px_16px] px-4 py-3">
                 <div className="flex flex-col min-w-40 flex-1">
-                  <Textarea className="min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60]" />
+                  <Textarea 
+                    className="min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4]" 
+                    placeholder="Your Message"
+                  />
                 </div>
               </div>
 
@@ -127,20 +130,20 @@ export const StitchDesign = (): JSX.Element => {
                 <div className="flex flex-wrap justify-center gap-[16px_16px] w-full">
                   <div className="inline-flex items-center flex-col">
                     <div className="inline-flex items-center flex-col">
-                      <div className="bg-[url(/vector---0-4.svg)] w-6 bg-[100%_100%]" />
+                      <div className="w-6 h-6 bg-gray-600 rounded" />
                     </div>
                   </div>
 
                   <div className="inline-flex items-center flex-col">
                     <div className="inline-flex items-center flex-col">
-                      <div className="bg-[url(/vector---0-5.svg)] w-6 bg-[100%_100%]" />
+                      <div className="w-6 h-6 bg-gray-600 rounded" />
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col items-center w-full">
                   <p className="font-normal text-[#969ec4] text-base text-center leading-6 [font-family:'Inter',Helvetica]">
-                    @2025 Aditya Das. All rights reserved.
+                    ©2025 Aditya Das. All rights reserved.
                   </p>
                 </div>
               </div>

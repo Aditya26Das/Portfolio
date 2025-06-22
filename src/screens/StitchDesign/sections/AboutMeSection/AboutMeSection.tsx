@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, AvatarImage } from "../../../../components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "../../../../components/ui/avatar";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -19,14 +19,14 @@ export const AboutMeSection = (): JSX.Element => {
   ];
 
   return (
-    <header className="flex items-center justify-between px-10 py-3 border-b border-[#e5e8ea] w-full">
+    <header className="flex items-center justify-between px-10 py-3 border-b border-[#383d60] w-full">
       {/* Logo and Title */}
       <div className="flex items-center gap-4">
         <div className="flex items-start">
-          <div className="w-4 h-4 bg-[url(/vector---0.svg)] bg-[100%_100%]" />
+          <div className="w-4 h-4 bg-blue-500 rounded-full" />
         </div>
         <h1 className="font-bold text-white text-lg leading-[23px] font-['Inter',Helvetica]">
-          Aditya&#39;s Portfolio
+          Aditya's Portfolio
         </h1>
       </div>
 
@@ -48,7 +48,10 @@ export const AboutMeSection = (): JSX.Element => {
         </NavigationMenu>
 
         <Avatar className="w-10 h-10 rounded-[20px]">
-          <AvatarImage src="src\images\Profile.jpg" alt="Profile" />
+          <AvatarImage src="/api/placeholder/40/40" alt="Profile" />
+          <AvatarFallback className="bg-[#0c164c] text-white font-bold">
+            AD
+          </AvatarFallback>
         </Avatar>
       </div>
     </header>
