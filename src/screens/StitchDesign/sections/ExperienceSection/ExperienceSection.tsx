@@ -34,59 +34,55 @@ export const ExperienceSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col items-start gap-3 p-4 w-full">
-      <div className="flex flex-wrap gap-4 w-full">
+    <section className="flex flex-col items-start gap-3 p-2 sm:p-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 w-full">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className="flex-1 min-w-[280px] max-w-[350px]"
+          <Card 
+            key={project.id} 
+            className="h-full hover:shadow-lg transition-shadow duration-300 border-none bg-transparent w-full"
           >
-            <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-none bg-transparent">
-              <CardContent className="flex flex-col items-start gap-3 p-0 pb-3">
-                <div
-                  className="w-full h-[169px] rounded-xl bg-[#1c1e30] border border-[#383d60] flex items-center justify-center"
-                >
-                  <img 
-                    src={project.imageUrl} 
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-xl"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.innerHTML = `<div class="text-white text-sm text-center">${project.title}</div>`;
-                      }
-                    }}
-                  />
+            <CardContent className="flex flex-col items-start gap-3 p-0 pb-3">
+              <div className="w-full h-[140px] sm:h-[160px] md:h-[169px] rounded-xl bg-[#1c1e30] border border-[#383d60] flex items-center justify-center overflow-hidden">
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title}
+                  className="w-full h-full object-cover rounded-xl"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `<div class="text-white text-sm text-center p-4">${project.title}</div>`;
+                    }
+                  }}
+                />
+              </div>
+              <div className="flex flex-col items-start w-full gap-2 px-1">
+                <h3 className="w-full font-medium text-white text-sm sm:text-base leading-5 sm:leading-6 font-sans">
+                  {project.title}
+                </h3>
+                <p className="w-full font-normal text-[#969ec4] text-xs sm:text-sm leading-4 sm:leading-[21px] font-sans">
+                  {project.description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-2 mt-2 w-full">
+                  <Button
+                    variant="outline"
+                    className="text-xs sm:text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440] hover:text-white flex-1 sm:flex-none h-8 sm:h-9"
+                    onClick={() => window.open(project.appLink, "_blank")}
+                  >
+                    View Live
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="text-xs sm:text-sm border-[#383d60] text-[#969ec4] hover:bg-[#1c1e30] hover:text-white flex-1 sm:flex-none h-8 sm:h-9"
+                    onClick={() => window.open(project.githubLink, "_blank")}
+                  >
+                    GitHub
+                  </Button>
                 </div>
-                <div className="flex flex-col items-start w-full gap-2">
-                  <h3 className="w-full font-medium text-white text-base leading-6 font-sans">
-                    {project.title}
-                  </h3>
-                  <p className="w-full font-normal text-[#969ec4] text-sm leading-[21px] font-sans">
-                    {project.description}
-                  </p>
-                  <div className="flex gap-2 mt-2">
-                    <Button
-                      variant="outline"
-                      className="text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440] hover:text-white"
-                      onClick={() => window.open(project.appLink, "_blank")}
-                    >
-                      View Live
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="text-sm border-[#383d60] text-black hover:bg-[#1c1e30] hover:text-white"
-                      onClick={() => window.open(project.githubLink, "_blank")}
-                    >
-                      GitHub
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </section>

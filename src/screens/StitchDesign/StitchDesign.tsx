@@ -24,100 +24,100 @@ export const StitchDesign = (): JSX.Element => {
         <div className="flex flex-col w-full">
           <AboutMeSection />
 
-          <div className="flex justify-center px-40 py-5 w-full">
+          <div className="flex justify-center px-4 sm:px-8 md:px-16 lg:px-40 py-5 w-full">
             <div className="flex flex-col max-w-[960px] w-full">
               <ProjectsSection />
 
-              <div className="flex flex-col pt-5 pb-3 px-4 w-full">
-                <h2 className="font-bold text-white text-[22px] leading-7 [font-family:'Inter',Helvetica]">
+              <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+                <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
                   About Me
                 </h2>
               </div>
 
-              <div className="flex flex-col pt-1 pb-3 px-4 w-full">
-                <p className="font-normal text-white text-base leading-6 [font-family:'Inter',Helvetica]">
+              <div className="flex flex-col pt-1 pb-3 px-2 sm:px-4 w-full">
+                <p className="font-normal text-white text-sm sm:text-base leading-5 sm:leading-6 [font-family:'Inter',Helvetica]">
                   👋 Hi, I'm Aditya Das, a tech enthusiast passionate about building intelligent systems. I specialize in AI/ML, full-stack app development with FastAPI and Streamlit, and have hands-on experience with Langchain, LLMs, and NLP. I'm also deeply invested in Data Structures & Algorithms, having solved 350+ problems on LeetCode.
                 </p>
               </div>
 
-              <div className="flex flex-col pt-5 pb-3 px-4 w-full">
-                <h2 className="font-bold text-white text-[22px] leading-7 [font-family:'Inter',Helvetica]">
+              <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+                <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
                   Projects
                 </h2>
               </div>
 
               <ExperienceSection />
 
-              <div className="flex flex-col pt-5 pb-3 px-4 w-full">
-                <h2 className="font-bold text-white text-[22px] leading-7 [font-family:'Inter',Helvetica]">
+              <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+                <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
                   Skills
                 </h2>
               </div>
 
               <SkillsSection />
 
-              <div className="flex flex-col pt-5 pb-3 px-4 w-full">
-                <h2 className="font-bold text-white text-[22px] leading-7 [font-family:'Inter',Helvetica]">
+              <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+                <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
                   Experience
                 </h2>
               </div>
 
               <AchievementsSection />
 
-              <div className="flex flex-col pt-5 pb-3 px-4 w-full">
-                <h2 className="font-bold text-white text-[22px] leading-7 [font-family:'Inter',Helvetica]">
+              <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+                <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
                   Achievements
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 gap-4 px-4 w-full">
+              <div className="grid grid-cols-1 gap-3 sm:gap-4 px-2 sm:px-4 w-full">
                 {achievements.map((achievement, index) => (
                   <div
                     key={`achievement-${index}`}
-                    className="w-full bg-[#1c1e30] border border-[#383d60] rounded-xl px-4 py-3 transition-all hover:shadow-md"
+                    className="w-full bg-[#1c1e30] border border-[#383d60] rounded-xl px-3 sm:px-4 py-3 transition-all hover:shadow-md"
                   >
-                    <p className="text-white text-sm leading-6 [font-family:'Inter',Helvetica]">
+                    <p className="text-white text-xs sm:text-sm leading-5 sm:leading-6 [font-family:'Inter',Helvetica]">
                       {achievement}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-col pt-5 pb-3 px-4 w-full">
-                <h2 className="text-[22px] leading-7 font-bold text-white [font-family:'Inter',Helvetica]">
+              <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+                <h2 className="text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 font-bold text-white [font-family:'Inter',Helvetica]">
                   Contact
                 </h2>
               </div>
 
-              <div className="flex flex-wrap max-w-[480px] gap-[16px_16px] px-4 py-3">
-                <div className="flex flex-col min-w-40 flex-1">
+              <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                <div className="flex flex-col w-full min-w-0 flex-1">
                   <Input
-                    className="h-14 p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica]"
+                    className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
                     placeholder="Your Name"
                   />
                 </div>
               </div>
 
-              <div className="flex flex-wrap max-w-[480px] gap-[16px_16px] px-4 py-3">
-                <div className="flex flex-col min-w-40 flex-1">
+              <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                <div className="flex flex-col w-full min-w-0 flex-1">
                   <Input
-                    className="h-14 p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica]"
+                    className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
                     placeholder="Your Email"
                   />
                 </div>
               </div>
 
-              <div className="flex flex-wrap max-w-[480px] gap-[16px_16px] px-4 py-3">
-                <div className="flex flex-col min-w-40 flex-1">
+              <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                <div className="flex flex-col w-full min-w-0 flex-1">
                   <Textarea 
-                    className="min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4]" 
+                    className="min-h-32 sm:min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4] text-sm sm:text-base p-3 sm:p-4" 
                     placeholder="Your Message"
                   />
                 </div>
               </div>
 
-              <div className="flex px-4 py-3 w-full">
-                <Button className="w-[84px] h-10 bg-[#0c164c] rounded-[20px] text-sm font-bold text-white [font-family:'Inter',Helvetica]">
+              <div className="flex px-2 sm:px-4 py-3 w-full">
+                <Button className="w-20 sm:w-[84px] h-10 bg-[#0c164c] rounded-[20px] text-sm font-bold text-white [font-family:'Inter',Helvetica] hover:bg-[#0a1440]">
                   Send
                 </Button>
               </div>
@@ -126,23 +126,23 @@ export const StitchDesign = (): JSX.Element => {
 
           <div className="flex justify-center w-full">
             <div className="flex flex-col max-w-[960px] flex-1">
-              <div className="flex flex-col gap-6 px-5 py-10 w-full">
-                <div className="flex flex-wrap justify-center gap-[16px_16px] w-full">
+              <div className="flex flex-col gap-4 sm:gap-6 px-4 sm:px-5 py-8 sm:py-10 w-full">
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 w-full">
                   <div className="inline-flex items-center flex-col">
                     <div className="inline-flex items-center flex-col">
-                      <div className="w-6 h-6 bg-gray-600 rounded" />
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-600 rounded" />
                     </div>
                   </div>
 
                   <div className="inline-flex items-center flex-col">
                     <div className="inline-flex items-center flex-col">
-                      <div className="w-6 h-6 bg-gray-600 rounded" />
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-600 rounded" />
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col items-center w-full">
-                  <p className="font-normal text-[#969ec4] text-base text-center leading-6 [font-family:'Inter',Helvetica]">
+                  <p className="font-normal text-[#969ec4] text-sm sm:text-base text-center leading-5 sm:leading-6 [font-family:'Inter',Helvetica]">
                     ©2025 Aditya Das. All rights reserved.
                   </p>
                 </div>
