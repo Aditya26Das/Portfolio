@@ -39,9 +39,9 @@ export const ExperienceSection = (): JSX.Element => {
         {projects.map((project) => (
           <Card 
             key={project.id} 
-            className="h-full hover:shadow-lg transition-shadow duration-300 border-none bg-transparent w-full"
+            className="h-full hover:shadow-lg transition-shadow duration-300 border-none bg-transparent w-full flex flex-col"
           >
-            <CardContent className="flex flex-col items-start gap-3 p-0 pb-3">
+            <CardContent className="flex flex-col h-full p-0 pb-3">
               <div className="w-full h-[140px] sm:h-[160px] md:h-[169px] rounded-xl bg-[#1c1e30] border border-[#383d60] flex items-center justify-center overflow-hidden">
                 <img 
                   src={project.imageUrl} 
@@ -57,13 +57,15 @@ export const ExperienceSection = (): JSX.Element => {
                   }}
                 />
               </div>
-              <div className="flex flex-col items-start w-full gap-2 px-1">
-                <h3 className="w-full font-medium text-white text-sm sm:text-base leading-5 sm:leading-6 font-sans">
-                  {project.title}
-                </h3>
-                <p className="w-full font-normal text-[#969ec4] text-xs sm:text-sm leading-4 sm:leading-[21px] font-sans">
-                  {project.description}
-                </p>
+              <div className="flex flex-col flex-grow justify-between gap-2 px-1 mt-3">
+                <div className="flex flex-col gap-2">
+                  <h3 className="w-full font-medium text-white text-sm sm:text-base leading-5 sm:leading-6 font-sans">
+                    {project.title}
+                  </h3>
+                  <p className="w-full font-normal text-[#969ec4] text-xs sm:text-sm leading-4 sm:leading-[21px] font-sans">
+                    {project.description}
+                  </p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-2 mt-2 w-full">
                   <Button
                     variant="outline"
