@@ -27,7 +27,7 @@ export const ExperienceSection = (): JSX.Element => {
       title: "LoanFitAI",
       description:
         "Created a machine learning web app to predict loan eligibility using a Decision Tree model with 93% accuracy, integrating FastAPI and Streamlit for real-time results.",
-      imageUrl: "src/images/loan-fit-ai.png",
+      imageUrl: "src/images/smart_resume_assistant.png",
       appLink: "https://loanfitai.streamlit.app/",
       githubLink: "https://github.com/Aditya26Das/LoanFitAi",
     },

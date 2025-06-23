@@ -29,7 +29,7 @@ export const AboutMeSection = (): JSX.Element => {
   // Function to handle resume download
   const handleResumeDownload = () => {
     // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
-    const resumeUrl = 'src/assets/AdityaDas.pdf'; // Update this path to your resume file
+    const resumeUrl = '/AdityaDas.pdf'; // Update this path to your resume file
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'AdityaDas.pdf'; // The filename for the downloaded file
