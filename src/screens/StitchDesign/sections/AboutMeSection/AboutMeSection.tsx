@@ -6,7 +6,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "../../../../components/ui/navigation-menu";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 export const AboutMeSection = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +24,18 @@ export const AboutMeSection = (): JSX.Element => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Function to handle resume download
+  const handleResumeDownload = () => {
+    // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
+    const resumeUrl = 'src/assets/AdityaDas.pdf'; // Update this path to your resume file
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'AdityaDas.pdf'; // The filename for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   // Smooth scroll function
@@ -61,7 +73,7 @@ export const AboutMeSection = (): JSX.Element => {
       </div>
 
       {/* Desktop Navigation and Avatar */}
-      <div className="hidden lg:flex items-center justify-end gap-8 flex-1">
+      <div className="hidden lg:flex items-center justify-end gap-6 xl:gap-8 flex-1">
         <NavigationMenu className="max-w-none">
           <NavigationMenuList className="flex gap-4 xl:gap-6">
             {navItems.map((item, index) => (
@@ -77,6 +89,15 @@ export const AboutMeSection = (): JSX.Element => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
+
+        {/* Resume Download Button */}
+        <button
+          onClick={handleResumeDownload}
+          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-md transition-colors cursor-pointer font-['Inter',Helvetica]"
+        >
+          <Download className="w-4 h-4" />
+          My Resume
+        </button>
 
         <Avatar className="w-8 h-8 sm:w-10 sm:h-10 rounded-[20px]">
           <AvatarImage src="/api/placeholder/40/40" alt="Profile" />
@@ -122,6 +143,18 @@ export const AboutMeSection = (): JSX.Element => {
                 {item.label}
               </a>
             ))}
+            
+            {/* Resume Download Button for Mobile */}
+            <button
+              onClick={() => {
+                handleResumeDownload();
+                setIsMenuOpen(false);
+              }}
+              className="mx-4 sm:mx-6 mt-2 inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-md transition-colors cursor-pointer font-['Inter',Helvetica]"
+            >
+              <Download className="w-4 h-4" />
+              Download Resume
+            </button>
           </nav>
         </div>
       )}
