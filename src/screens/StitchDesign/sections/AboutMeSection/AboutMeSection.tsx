@@ -49,7 +49,7 @@ export const AboutMeSection = (): JSX.Element => {
   };
 
   return (
-    <header className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-[#383d60] w-full relative sticky top-0 bg-[#111421] z-50">
+    <header className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-[#383d60] w-full relative top-0 bg-[#111421] z-50">
       {/* Logo and Title */}
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="flex items-start">
