@@ -17,6 +17,7 @@ export const AboutMeSection = (): JSX.Element => {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
+    { label: "Education", href: "#education" },
     { label: "Achievements", href: "#achievements" },
     { label: "Profiles", href: "#profiles" },
     { label: "Contact", href: "#contact" },

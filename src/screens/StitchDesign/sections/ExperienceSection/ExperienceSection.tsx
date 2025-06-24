@@ -27,7 +27,7 @@ export const ExperienceSection = (): JSX.Element => {
       title: "LoanFitAI",
       description:
         "Created a machine learning web app to predict loan eligibility using a Decision Tree model with 93% accuracy, integrating FastAPI and Streamlit for real-time results.",
-      imageUrl: "src/images/smart_resume_assistant.png",
+      imageUrl: "src/images/loan-fit-ai.png",
       appLink: "https://loanfitai.streamlit.app/",
       githubLink: "https://github.com/Aditya26Das/LoanFitAi",
     },
@@ -69,14 +69,14 @@ export const ExperienceSection = (): JSX.Element => {
                 <div className="flex flex-col sm:flex-row gap-2 mt-2 w-full">
                   <Button
                     variant="outline"
-                    className="text-xs sm:text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440] hover:text-white flex-1 sm:flex-none h-8 sm:h-9"
+                    className="text-xs sm:text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440] hover:text-white active:scale-95 flex-1 sm:flex-none h-8 sm:h-9"
                     onClick={() => window.open(project.appLink, "_blank")}
                   >
                     View Live
                   </Button>
                   <Button
                     variant="outline"
-                    className="text-xs sm:text-sm border-[#383d60] text-[#969ec4] hover:bg-[#1c1e30] hover:text-white flex-1 sm:flex-none h-8 sm:h-9"
+                    className="text-xs sm:text-sm border-[#383d60] text-[#1b1c1f] hover:bg-[#1c1e30] hover:text-white active:scale-95 flex-1 sm:flex-none h-8 sm:h-9"
                     onClick={() => window.open(project.githubLink, "_blank")}
                   >
                     GitHub

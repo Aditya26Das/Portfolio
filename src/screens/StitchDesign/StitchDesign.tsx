@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import { Button } from "../../components/ui/button";
-import { Input } from "../../components/ui/input";
-import { Textarea } from "../../components/ui/textarea";
 import { AboutMeSection } from "./sections/AboutMeSection";
 import { AchievementsSection } from "./sections/AchievementsSection";
 import { ExperienceSection } from "./sections/ExperienceSection";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { SkillsSection } from "./sections/SkillsSection";
 import { ProfileLinksSection } from "./sections/ProfileLinksSection";
+import { EducationSection } from "./sections/Education";
 
 export const StitchDesign = (): JSX.Element => {
   // Achievement data for mapping
@@ -91,6 +89,15 @@ export const StitchDesign = (): JSX.Element => {
                 <AchievementsSection />
               </section>
 
+              <section id="education" className="scroll-mt-20">
+                <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
+                  <h2 className="font-bold text-white text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 [font-family:'Inter',Helvetica]">
+                    Education
+                  </h2>
+                </div>
+                <EducationSection/>
+              </section>
+
               {/* Achievements Section */}
               <section id="achievements" className="scroll-mt-20">
                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
@@ -128,7 +135,7 @@ export const StitchDesign = (): JSX.Element => {
               <section id="contact" className="scroll-mt-20">
                 <div className="flex flex-col pt-5 pb-3 px-2 sm:px-4 w-full">
                   <h2 className="text-lg sm:text-xl md:text-[22px] leading-6 sm:leading-7 font-bold text-white [font-family:'Inter',Helvetica]">
-                    Contact
+                    Contact Me
                   </h2>
                 </div>
 
@@ -166,40 +173,40 @@ export const StitchDesign = (): JSX.Element => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                {/* <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
                   <div className="flex flex-col w-full min-w-0 flex-1">
                     <Input
                       className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
                       placeholder="Your Name"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                {/* <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
                   <div className="flex flex-col w-full min-w-0 flex-1">
                     <Input
                       className="h-12 sm:h-14 p-3 sm:p-[15px] rounded-xl bg-[#1c1e30] border-[#383d60] text-[#969ec4] [font-family:'Inter',Helvetica] text-sm sm:text-base"
                       placeholder="Your Email"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
+                {/* <div className="flex flex-wrap max-w-full sm:max-w-[480px] gap-3 sm:gap-4 px-2 sm:px-4 py-3">
                   <div className="flex flex-col w-full min-w-0 flex-1">
                     <Textarea 
                       className="min-h-32 sm:min-h-36 w-full rounded-xl bg-[#1c1e30] border-[#383d60] text-white placeholder:text-[#969ec4] text-sm sm:text-base p-3 sm:p-4" 
                       placeholder="Your Message"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                <div className="flex px-2 sm:px-4 py-3 w-full">
+                {/* <div className="flex px-2 sm:px-4 py-3 w-full">
                   <Button className="w-20 sm:w-[84px] h-10 bg-[#0c164c] rounded-[20px] text-sm font-bold text-white [font-family:'Inter',Helvetica] hover:bg-[#0a1440]">
                     Send
                   </Button>
-                </div>
+                </div> */}
               </section>
-            </div>
+             </div>
           </div>
 
           {/* Footer */}
