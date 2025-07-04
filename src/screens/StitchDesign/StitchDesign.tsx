@@ -12,7 +12,7 @@ export const StitchDesign = (): JSX.Element => {
   const achievements = [
     "Secured a rank of 724 (top 3%) out of 23,596 participants in the Biweekly Contest 145 on LeetCode.",
     "Achieved a rank of 2,297 (top 9%) out of 25,692 participants in the Biweekly Contest 146 on LeetCode.",
-    "Ranked 373 (top 13%) out of 2,834 participants in the CodeChef Starters 176 weekly contest.",
+    "Ranked 223 (top 8%) out of 2,869 participants in the CodeChef Starters 193 weekly contest.",
     "Attained a consistent ranking among the top 6 students in the branch, placing within the top 10% overall.",
     "Solved more than 350+ problems on LeetCode, showcasing a strong understanding of Data Structures and Algorithms."
   ];

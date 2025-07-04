@@ -6,7 +6,8 @@ export const AchievementsSection = (): JSX.Element => {
   const experiences = [
     {
       title: " Summer Intern - AI/ML at Neophtyte Ambient Intelligence",
-      period: "May 2025 - June 2025",
+      period: "May 2025 - July 2025",
+      duration: "6 weeks",
       isFirst: true,
     },
   ];
@@ -43,6 +44,11 @@ export const AchievementsSection = (): JSX.Element => {
               <div className="w-full mb-[-4.00px]">
                 <div className="font-normal text-[#969ec4] text-base leading-6">
                   {experience.period}
+                </div>
+              </div>
+              <div className="w-full mb-[-4.00px]">
+                <div className="font-normal text-[#969ec4] text-base leading-6">
+                  Duration: {experience.duration}
                 </div>
               </div>
             </div>
