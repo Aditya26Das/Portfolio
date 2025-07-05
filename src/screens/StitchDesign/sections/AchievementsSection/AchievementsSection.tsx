@@ -5,7 +5,7 @@ export const AchievementsSection = (): JSX.Element => {
   // Data for achievements/work experience
   const experiences = [
     {
-      title: " Summer Intern - AI/ML at Neophtyte Ambient Intelligence",
+      title: " Summer Intern - AI/ML at Neophyte Ambient Intelligence",
       period: "May 2025 - July 2025",
       duration: "6 weeks",
       isFirst: true,
