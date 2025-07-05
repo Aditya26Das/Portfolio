@@ -11,7 +11,6 @@ export const StitchDesign = (): JSX.Element => {
   // Achievement data for mapping
   const achievements = [
     "Secured a rank of 724 (top 3%) out of 23,596 participants in the Biweekly Contest 145 on LeetCode.",
-    "Achieved a rank of 2,297 (top 9%) out of 25,692 participants in the Biweekly Contest 146 on LeetCode.",
     "Ranked 223 (top 8%) out of 2,869 participants in the CodeChef Starters 193 weekly contest.",
     "Attained a consistent ranking among the top 6 students in the branch, placing within the top 10% overall.",
     "Solved more than 350+ problems on LeetCode, showcasing a strong understanding of Data Structures and Algorithms."
@@ -51,7 +50,7 @@ export const StitchDesign = (): JSX.Element => {
 
                 <div className="flex flex-col pt-1 pb-3 px-2 sm:px-4 w-full">
                   <p className="font-normal text-white text-sm sm:text-base leading-5 sm:leading-6 [font-family:'Inter',Helvetica]">
-                    👋 Hi, I'm Aditya Das, a tech enthusiast passionate about building intelligent systems. I specialize in AI/ML, full-stack app development with FastAPI and Streamlit, and have hands-on experience with Langchain, LLMs, and NLP. I'm also deeply invested in Data Structures & Algorithms, having solved 350+ problems on LeetCode.
+                    👋 Hi, I'm Aditya Das, a tech enthusiast passionate about building intelligent systems. I specialize in AI/ML, building data driven applications using FastAPI and Streamlit, and have hands-on experience with Langchain, LLMs, and NLP. I'm also deeply invested in Data Structures & Algorithms, having solved 350+ problems on LeetCode.
                   </p>
                 </div>
               </section>
