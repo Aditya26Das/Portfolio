@@ -18,7 +18,7 @@ export const ExperienceSection = (): JSX.Element => {
       title: "Semantic Book Recommendation System",
       description:
         " Built a Book Recommendation System using Retrieval-Augmented Generation (RAG) over 5,197 books, utilizing zero-shot text classification and sentiment analysis to generate personalized suggestions based on user input description, category, and emotional tone",
-      imageUrl: "src/images/semantic_book_recommendation.png",
+      imageUrl: "src/images/book_recommender.png",
       appLink: "https://book-recommender-system-bur3.onrender.com/",
       githubLink: "https://github.com/Aditya26Das/Book_Recommender_System.git",
     },
@@ -27,7 +27,7 @@ export const ExperienceSection = (): JSX.Element => {
       title: "AI-Powered Code Writer",
       description:
         "Implemented a Code Writer that interprets natural language prompts to generate clean, executable code in 4 different programming languages, featuring an interactive UI and built-in copy-to-clipboard functionality.",
-      imageUrl: "src/images/ai_powered_code_writer.png",
+      imageUrl: "src/images/coding_assistant.png",
       appLink: "https://aicodingassistant.onrender.com/",
       githubLink: "https://github.com/Aditya26Das/AICodingAssistant.git",
     },
