@@ -15,21 +15,21 @@ export const ExperienceSection = (): JSX.Element => {
     },
     {
       id: 2,
-      title: "LangGraph AI Agent",
+      title: "Semantic Book Recommendation System",
       description:
-        "Engineered a scalable chatbot platform using LangGraph, ChatGroq LLMs, and FastAPI to serve real-time responses via secure REST APIs, handling 100+ daily API requests.",
-      imageUrl: "src/images/langraph_chatbot.png",
-      appLink: "https://agenticaichatbot.streamlit.app/",
-      githubLink: "https://github.com/Aditya26Das/AgenticAIChatbot",
+        " Built a Book Recommendation System using Retrieval-Augmented Generation (RAG) over 5,197 books, utilizing zero-shot text classification and sentiment analysis to generate personalized suggestions based on user input description, category, and emotional tone",
+      imageUrl: "src/images/semantic_book_recommendation.png",
+      appLink: "https://book-recommender-system-bur3.onrender.com/",
+      githubLink: "https://github.com/Aditya26Das/Book_Recommender_System.git",
     },
     {
       id: 3,
-      title: "LoanFitAI",
+      title: "AI-Powered Code Writer",
       description:
-        "Created a machine learning web app to predict loan eligibility using a Decision Tree model with 93% accuracy, integrating FastAPI and Streamlit for real-time results.",
-      imageUrl: "src/images/loan-fit-ai.png",
-      appLink: "https://loanfitai.streamlit.app/",
-      githubLink: "https://github.com/Aditya26Das/LoanFitAi",
+        "Implemented a Code Writer that interprets natural language prompts to generate clean, executable code in 4 different programming languages, featuring an interactive UI and built-in copy-to-clipboard functionality.",
+      imageUrl: "src/images/ai_powered_code_writer.png",
+      appLink: "https://aicodingassistant.onrender.com/",
+      githubLink: "https://github.com/Aditya26Das/AICodingAssistant.git",
     },
   ];
 
