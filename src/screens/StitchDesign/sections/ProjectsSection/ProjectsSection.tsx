@@ -76,7 +76,7 @@ export const ProjectsSection = (): JSX.Element => {
                     href="mailto:adityadas26112003@gmail.com"
                     className="text-[#c3c8e9] hover:text-white text-xs sm:text-sm font-['Inter',Helvetica] transition-colors"
                   >
-                    adityadas26112003@gmail.com
+                    aditya26.das@gmail.com
                   </a>
                 </div>
 

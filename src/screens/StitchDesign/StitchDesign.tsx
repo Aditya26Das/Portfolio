@@ -152,7 +152,7 @@ export const StitchDesign = (): JSX.Element => {
                         href="mailto:adityadas26112003@gmail.com"
                         className="text-[#969ec4] hover:text-white text-sm sm:text-base [font-family:'Inter',Helvetica] transition-colors"
                       >
-                        adityadas26112003@gmail.com
+                        aditya26.das@gmail.com
                       </a>
                     </div>
                     
