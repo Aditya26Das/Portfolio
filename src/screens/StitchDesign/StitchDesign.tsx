@@ -149,7 +149,7 @@ export const StitchDesign = (): JSX.Element => {
                         </svg>
                       </div>
                       <a 
-                        href="mailto:adityadas26112003@gmail.com"
+                        href="mailto:aditya26.das@gmail.com"
                         className="text-[#969ec4] hover:text-white text-sm sm:text-base [font-family:'Inter',Helvetica] transition-colors"
                       >
                         aditya26.das@gmail.com

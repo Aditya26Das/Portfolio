@@ -73,7 +73,7 @@ export const ProjectsSection = (): JSX.Element => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   <a
-                    href="mailto:adityadas26112003@gmail.com"
+                    href="mailto:aditya26.das@gmail.com"
                     className="text-[#c3c8e9] hover:text-white text-xs sm:text-sm font-['Inter',Helvetica] transition-colors"
                   >
                     aditya26.das@gmail.com
