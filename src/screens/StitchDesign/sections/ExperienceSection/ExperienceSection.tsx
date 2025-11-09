@@ -10,7 +10,7 @@ export const ExperienceSection = (): JSX.Element => {
       description:
         "Developed an AI-powered resume optimization tool using Google Generative AI and Pinecone, processing over 2,300 resumes with vector embeddings for enhanced ATS matching.",
       imageUrl: "/images/smart_resume_assistant.png",
-      appLink: "https://smartresumeai.streamlit.app/",
+      appLink: "https://youtu.be/TKRhca3mr8k?si=z0Uq0UwQvIKwCPfE",
       githubLink: "https://github.com/Aditya26Das/SmartResumeAssistant",
     },
     {
@@ -19,7 +19,7 @@ export const ExperienceSection = (): JSX.Element => {
       description:
         " Built a Book Recommendation System using Retrieval-Augmented Generation (RAG) over 5,197 books, utilizing zero-shot text classification and sentiment analysis to generate personalized suggestions based on user input description, category, and emotional tone",
       imageUrl: "/images/book_recommender.png",
-      appLink: "https://book-recommender-system-bur3.onrender.com/",
+      appLink: "https://youtu.be/TTuK_2OdNy4?si=YTSN3sxLHbx8hUx5",
       githubLink: "https://github.com/Aditya26Das/Book_Recommender_System.git",
     },
     {
@@ -28,7 +28,7 @@ export const ExperienceSection = (): JSX.Element => {
       description:
         "Implemented a Code Writer that interprets natural language prompts to generate clean, executable code in 4 different programming languages, featuring an interactive UI and built-in copy-to-clipboard functionality.",
       imageUrl: "/images/coding_assistant.png",
-      appLink: "https://aicodingassistant.onrender.com/",
+      appLink: "https://youtu.be/8uKRLRG-Nlk?si=1JmMYnoDHlF-Q5iB",
       githubLink: "https://github.com/Aditya26Das/AICodingAssistant.git",
     },
   ];
@@ -72,7 +72,7 @@ export const ExperienceSection = (): JSX.Element => {
                     className="text-xs sm:text-sm bg-[#0c164c] border-[#0c164c] text-white hover:bg-[#0a1440] hover:text-white active:scale-95 flex-1 sm:flex-none h-8 sm:h-9"
                     onClick={() => window.open(project.appLink, "_blank")}
                   >
-                    View Live
+                    View Demo
                   </Button>
                   <Button
                     variant="outline"
