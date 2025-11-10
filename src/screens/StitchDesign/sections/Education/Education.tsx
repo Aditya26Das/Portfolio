@@ -7,7 +7,7 @@ export const EducationSection = (): JSX.Element => {
     {
       institution: "IIIT Bhubaneswar, BTech in Information Technology",
       period: "Nov 2022 - Present",
-      grade: "CGPA: 8.68",
+      grade: "CGPA: 8.72",
       isFirst: true,
     },
     {
